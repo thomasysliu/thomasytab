@@ -22,7 +22,18 @@ document.nctutab = {
             this.inject_portal();
         } else if (document.URL.search(/http(s)?:\/\/regist.nctu.edu.tw/) == 0) {
             this.inject_regist();
+        } else if (document.URL.search(/http(s)?:\/\/timetable.nctu.edu.tw/) == 0) {
+            document.nctutab.inject_timetable();
+            document.querySelector('#flang').onchange = function() {
+            	document.nctutab.inject_timetable();
+            }
         }
+    },
+    inject_timetable: function () {
+        document.querySelector('#crstime_search').onclick = function() {
+            document.nctutab.cos_name_highlight();
+        }
+    
     },
     inject_cos: function () {
         this.cos_name_highlight();
@@ -401,7 +412,7 @@ document.nctutab = {
                     //search text in child nodes
                     for (var k = 0; k < childs.length; k++) {
                         if (childs[k].data != null) {
-                            if (childs[k].data == "開課教師") {
+                            if (childs[k].data == "開課教師" || childs[k].data == "Lecturers") {
                                 name_loc = cur_loc;
                                 //console.log("found @ " + cur_loc);
                             }
@@ -409,7 +420,7 @@ document.nctutab = {
                             //childs
                             var grand_child = childs[k].childNodes;
                             for (var m = 0; m < grand_child.length; m++) {
-                                if (grand_child[m].data == "開課教師") {
+                                if (grand_child[m].data == "開課教師" || grand_child[m].data == "Lecturers") {
                                     name_loc = cur_loc;
                                     //console.log("found @ " + cur_loc);
                                 }
@@ -431,7 +442,7 @@ document.nctutab = {
                         //search text in child nodes
                         for (var k = 0; k < childs.length; k++) {
                             if (childs[k].data != null) {
-                                if (childs[k].data == "開課教師") {
+                                if (childs[k].data == "開課教師" || childs[k].data == "Lecturers") {
                                     name_loc = cur_loc;
                                     //console.log("found @ " + cur_loc);
                                 }
@@ -439,7 +450,7 @@ document.nctutab = {
                                 //childs
                                 var grand_child = childs[k].childNodes;
                                 for (var m = 0; m < grand_child.length; m++) {
-                                    if (grand_child[m].data == "開課教師") {
+                                    if (grand_child[m].data == "開課教師" || grand_child[m].data == "Lecturers") {
                                         name_loc = cur_loc;
                                         //console.log("found @ " + cur_loc);
                                     }

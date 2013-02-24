@@ -1,6 +1,6 @@
 {
   "name": "NCTU Tab",
-  "version": "10.9.6",
+  "version": "10.9.7",
   "manifest_version": 2,
   "description": "NCTU Tab 為 交大系統整合導覽列將常用服務整合成導覽列，更方便使用快速切換多個交大系統可在 交大首頁 圖書館 單一入口 等服務間快速切換",
   "icons": { "16": "nctutab-16.png",
