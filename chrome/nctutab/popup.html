@@ -1,0 +1,33 @@
+<html>
+	<head>
+        <meta charset="utf-8">
+		<meta name="language" content="zh_TW" />
+<script type="text/javascript" src="popup.js"></script>
+
+<style>
+body {
+  font-size: 75%;
+  font-family: Helvetica, Arial, sans-serif;
+  min-width: 170px;
+  background: #ffffff;
+  color: #000000;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="adSchedule.css" />
+
+
+	</head>
+<p>
+	<input type="checkbox" onchange="return set_white_domain(this.checked);" id="domain">在此網域隱藏NCTU Tab</input>
+	
+</p>
+<p>
+	<input type="checkbox" onchange="return set_white_url(this.checked);" id="url">在此網頁隱藏NCTU Tab</input>
+</p>
+<p>
+	<input type="button" value="暫時隱藏NCTU Tab"  onclick="return hide_tab();"/>
+</p>
+
+</html>

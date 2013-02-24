@@ -1,0 +1,40 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="language" content="zh_TW" />
+        <style>
+            body {
+                font-size: 75%;
+                font-family: Helvetica, Arial, sans-serif;
+                -moz-user-select: -moz-none;
+                -khtml-user-select: none;
+                -webkit-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <div id="config">
+		<input id="nctutab_domain" type="hidden" value="" name="nctutab_domain" />
+		<input id="nctutab_url" type="hidden" value="" name="nctutab_url" />
+        <div id="non_pb">
+            <p>
+                <input type="checkbox" id="set_white_domain" id="domain">在此網域隱藏NCTU Tab</input>
+            </p>
+            <p>
+                <input type="checkbox" id="set_white_url" id="url">在此網頁隱藏NCTU Tab</input>
+            </p>
+        </div>
+        <div id="pb">
+            <p>在私密瀏覽模式NCTU Tab無法對這個頁面作設定</p>
+        </div>
+        <p>
+            <input type="button" id="hide_show_nctutab" value="暫時隱藏/顯示NCTU Tab" />
+        </p>
+    </div>
+    <div id="noconfig">
+        <p>NCTU Tab無法對這個頁面作設定</p>
+    </div>
+
+</html>

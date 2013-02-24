@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://thomasy.tw/nctutab">
+    <name>NCTUTab</name>
+    <author href="http://thomasy.tw/about/me">Thomas YS Liu</author>
+    <description xml:lang="en">NCTU Tab is an integrated navigation bar for National Chiao Tung University. And it also provides other useful things.</description>
+    <description xml:lang="zh">NCTU Tab 為 交大系統整合導覽列,更提昇您的瀏覽品質</description>
+    
+    <icon src="icons/nctutab-64.png"/>
+    <icon src="icons/nctutab-16.png"/>
+</widget>

@@ -1,0 +1,41 @@
+{
+  "name": "NCTU Tab",
+  "version": "10.9.6",
+  "manifest_version": 2,
+  "description": "NCTU Tab 為 交大系統整合導覽列將常用服務整合成導覽列，更方便使用快速切換多個交大系統可在 交大首頁 圖書館 單一入口 等服務間快速切換",
+  "icons": { "16": "nctutab-16.png",
+           "32": "nctutab-32.png",
+           "48": "nctutab-48.png",
+           "64": "nctutab-64.png",
+           "128": "nctutab-128.png" },
+  "homepage_url": "http://thomasy.tw/nctutab",
+  "page_action" :
+  {
+    "default_icon" : "config-16.png",
+    "default_title" : "設定NCTU Tab",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.nctu.edu.tw/*"],
+      "js": ["nctutab.js"],
+      "css": ["nctutab.css"],
+      "all_frames": true
+    },
+    {
+      "matches": ["https://regist.nctu.edu.tw/*","http://regist.nctu.edu.tw/*","https://cos.adm.nctu.edu.tw/*","http://cos.adm.nctu.edu.tw/*","http://portal.nctu.edu.tw/*","https://portal.nctu.edu.tw/*"],
+      "css": ["cos.css"],
+      "all_frames": true
+    },
+    {
+      "matches": ["*://*/*"],
+      "js": ["none.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "cookies",
+    "*://*/*",
+    "*://*.nctu.edu.tw/*"
+  ]
+}

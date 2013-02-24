@@ -1,0 +1,10 @@
+
+1. Put 'php5' 'google-chrome' in $PATH
+
+2. Change directory to 'fun/nctu-plugin/chrome'
+
+3. execute ./build.sh
+
+4. you can find the extension in fun/nctu-plugin/chrome/build
+
+5. 
