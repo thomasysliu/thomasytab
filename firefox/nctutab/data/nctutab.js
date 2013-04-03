@@ -111,12 +111,12 @@ document.nctutab = {
                 var ul = document.createElement('ul');
                 ul.className = 'nctuTab';
                 ul.id = 'nctuTab';
-                ul.onclick = function () {
+                /*ul.onclick = function () {
                     if ((window.innerWidth < 500 || screen.width < 500) && this.className == 'nctuTab') {
                         this.className = 'nctuTab-open';
                     }
                     return false;
-                };
+                };*/
                 for (var i = 0; i < res.length; i++) {
                     var li = document.createElement('li');
                     var a = document.createElement('a');
