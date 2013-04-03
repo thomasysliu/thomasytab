@@ -6,7 +6,7 @@ try{
 var tabs = require("tabs");
 var prefs = require("simple-prefs");
 var windows = require("windows").browserWindows;
-var pb = require("private-browsing");
+//var pb = require("private-browsing");
 }catch(err){
 	// May not avilable for mobile
 }
@@ -159,14 +159,14 @@ var panel = require("panel").Panel({
                     'url_white': url_white,
                     'domain_white': domain_white,
                     'valid': true,
-                    'is_pb': pb.isActive
+                    'is_pb': require("private-browsing").isPrivate(tabs.activeTab) 
                 });
             } else {
                 //console.log("invalid url");
                 this.postMessage({
                     'action': 'set_perf',
                     'valid': false,
-                    'is_pb': pb.isActive
+                    'is_pb': require("private-browsing").isPrivate(tabs.activeTab) 
                 });
             }
         } else if (message.action == "set_white_domain") {
@@ -239,8 +239,8 @@ var url_icon = {
         }
         doc = null;
     },
-    onPageLoad: function (aEvent) {
-        if (tabs.activeTab.url.search(/http(s)?:\/\//i) == 0 && pb.isActive == false) {
+    onPageLoad: function (tab) {
+        if (tabs.activeTab.url.search(/http(s)?:\/\//i) == 0 && require("private-browsing").isPrivate(tabs) == false) {
             curr_icon.style.display = "";
         } else {
             curr_icon.style.display = "none";
