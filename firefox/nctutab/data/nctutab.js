@@ -75,8 +75,8 @@ document.nctutab = {
                 url: 'http://www.nctu.edu.tw/',
                 exp: /http(s):\/\/www.nctu.edu.tw\//i,
             }, {
-                name: 'NCTU Talk',
-                url: 'http://news.thomasy.tw/group/tw.bbs.campus.nctu',
+                name: 'Talk板',
+                url: 'https://groups.google.com/forum/#!forum/tw.bbs.campus.nctu',
                 exp: /http(s)?:\/\/news.thomasy.tw\/group\/tw.bbs.campus.nctu/i,
             }, {
                 name: 'E3教學平台',
@@ -330,6 +330,7 @@ document.nctutab = {
         window.scroll(0, 10000);
     },
     cos_name_highlight: function () {
+    /*
         var all_table = document.getElementsByTagName('table');
         if (all_table.length > 0) {
             this.nctutab_popup = document.createElement('div');
@@ -470,9 +471,10 @@ document.nctutab = {
                 }
                 name_loc = -1;
             }
-        }
+        }*/
     },
     cos_highlight_recursive: function (nodes) {
+    	return true;
         if (nodes.data != null) {
             if (nodes.data.length >= 4) {
                 var person = nodes.data;

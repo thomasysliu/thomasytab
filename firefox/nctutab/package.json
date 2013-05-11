@@ -1,11 +1,11 @@
 {
-    "name": "nctutab", 
+    "name": "thomasytab", 
     "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
     "author": "Thomas YS Liu", 
-    "version": "3.2.5beta", 
-    "fullName": "NCTU Tab", 
+    "version": "3.2.6rc", 
+    "fullName": "Thomasy Tab", 
     "id": "jid1-KPGZz5f0jyE5AA", 
-    "description": "NCTU Tab is an integrated navigation bar for National Chiao Tung University. And it also provides other useful things.",
+    "description": "NCTU Tab is an integrated navigation bar for some school. And it also provides other useful things.",
     "icon": "data/icon64.png",
     "icon64": "data/icon64.png",
     "preferences": [
@@ -13,7 +13,7 @@
             "type": "bool",
             "name": "nctutab_all_domain",
             "value": false,
-            "title": "NCTU Tab for all domain"
+            "title": "Thomasy Tab for all domain"
         }
     ],
     "permissions": {"private-browsing": true}
